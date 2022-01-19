@@ -6,17 +6,20 @@ public class Selection_Practice {
     public static void main(String[] args) {
         int[] intArray = {2,4,4,22,-45,-3400,131242};
 
-        for(int lastUnsortedIndex = intArray.length-1; lastUnsortedIndex > 0; lastUnsortedIndex--){
-            int largest = 0;
-            for(int i = 0; i <= lastUnsortedIndex; i++){
-                if(intArray[i] > intArray[largest]){
-                    largest = i;
+        for(int firstUnsortedIndex =1; firstUnsortedIndex < intArray.length-1; firstUnsortedIndex++){
+            int newElement =0;
+            for(int lastSortedIndex=0; lastSortedIndex < intArray.length; lastSortedIndex++){
+                if(firstUnsortedIndex <= lastSortedIndex){
+                    newElement = firstUnsortedIndex;
+                    swap(intArray, firstUnsortedIndex, newElement);
                 }
             }
-            swap(intArray, lastUnsortedIndex, largest);
+        }
+        for(int i =0; i<intArray.length;i++){
+            System.out.println(intArray[i]);
         }
 
-        System.out.println(Arrays.toString(intArray));
+
     }
 
     public static void swap(int[] array, int i, int j) {

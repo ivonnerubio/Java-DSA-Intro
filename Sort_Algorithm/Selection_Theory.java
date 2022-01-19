@@ -7,30 +7,21 @@ public class Selection_Theory {
 
         int[] intArray = {20, 35, -15, 7, 55, 1, -22};
 
-        for(int lastUnsortedIndex = intArray.length; lastUnsortedIndex > 0; lastUnsortedIndex--){
+        for(int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length; firstUnsortedIndex++){
 
-            int largest = 0;
+            int new_element = intArray[firstUnsortedIndex];
+            int i;
 
-            for(int i =1; i <= lastUnsortedIndex; i++){
-                if(intArray[i] > intArray[largest]){
-                    largest = i;
-                }
+            for(i =firstUnsortedIndex; i > 0 && intArray[i-1] > new_element; i--){
+                intArray[i] = intArray[i-1];
+
             }
-            swap(intArray, largest, lastUnsortedIndex);
-            }
+            intArray[i] = new_element;
+        }
 
-        for(int i =0; i<intArray.length;i++){
-            System.out.println(intArray[i]);
+        for (int j : intArray) {
+            System.out.println(j);
         }
     }
 
-    public static void swap(int[] array, int i, int j){
-        if(i==j){
-            return;
-        }
-
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
 }

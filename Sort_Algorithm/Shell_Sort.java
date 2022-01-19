@@ -2,14 +2,19 @@ package Sort_Algorithm;
 
 public class Shell_Sort {
     public static void main(String[] args){
-
         int[] intArray = {20, 35, -15, 7, 55, 1, -22};
 
-        // i = gap = 3
-        // j = i = 3
-        // newElement = intArray[i]=7
-        // Compare intArray[j-gap] with the new element
-
+        for(int gap = intArray.length / 2; gap > 0; gap /= 2){
+            for(int i = gap; i < intArray.length; i++){
+                int newElement = intArray[i];
+                int j = i;
+                while(j >= gap && intArray[j-gap] > newElement){
+                    intArray[j] = intArray[j-gap];
+                    j -= gap;
+                }
+                intArray[j] = newElement;
+            }
+        }
 
 
 
@@ -17,6 +22,4 @@ public class Shell_Sort {
             System.out.println(intArray[i]);
         }
     }
-
-    
 }
