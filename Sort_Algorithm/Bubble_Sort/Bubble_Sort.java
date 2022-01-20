@@ -1,4 +1,4 @@
-package Sort_Algorithm;
+package Sort_Algorithm.Bubble_Sort;
     /*
         this is the implementation of the bubble sort algorithm. it works in the followin steps
             - outer loop that sets the array into two different sections sorted;unstorted

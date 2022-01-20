@@ -1,4 +1,4 @@
-package Sort_Algorithm;
+package Sort_Algorithm.Insertion_Sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Sort_Algorithm;
+package Sort_Algorithm.Shell_Sort;
 
 public class Shell_Sort_Practice {
     public static void main(String[] args) {
