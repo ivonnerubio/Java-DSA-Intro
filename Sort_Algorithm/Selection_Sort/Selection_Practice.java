@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Selection_Practice {
     public static void main(String[] args) {
-        int[] intArray = {2,4,4,22,-45,-3400,131242};
+        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
 
         for(int firstUnsortedIndex =1; firstUnsortedIndex < intArray.length-1; firstUnsortedIndex++){
             int newElement =0;
