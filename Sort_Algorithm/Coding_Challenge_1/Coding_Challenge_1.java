@@ -7,6 +7,7 @@ public class Coding_Challenge_1 {
         mergeSort(intArray, 0, intArray.length);
 
         for (int i = 0; i < intArray.length; i++) {
+
             System.out.println(intArray[i]);
         }
     }
@@ -25,7 +26,7 @@ public class Coding_Challenge_1 {
 
     public static void merge(int[] input, int start, int mid, int end) {
 
-        if (input[mid - 1] <= input[mid]) {
+        if (input[mid - 1] >= input[mid]) {
             return;
         }
 
@@ -34,8 +35,8 @@ public class Coding_Challenge_1 {
         int tempIndex = 0;
 
         int[] temp = new int[end - start];
-        while (i < mid && j < end) {
-            temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
+        while (i < mid && j <  end) {
+            temp[tempIndex++] = input[i] >= input[j] ? input[i++] : input[j++];
         }
 
         System.arraycopy(input, i, input, start + tempIndex, mid - i);
