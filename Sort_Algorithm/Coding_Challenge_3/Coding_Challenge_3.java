@@ -2,12 +2,12 @@ package Sort_Algorithm.Coding_Challenge_3;
 
 public class Coding_Challenge_3 {
     public static void main(String[] args) {
-        String[] stringsArray = { "bcdef", "dbaqc", "abcde", "omadd", "bbbbb"};
+        String[] radixArray = { "bcdef", "dbaqc", "abcde", "omadd", "bbbbb"};
 
-        radixSort(stringsArray, 10, 4);
+        radixSort(radixArray, 10, 5);
 
-        for (int i = 0; i < stringsArray.length; i++) {
-            System.out.println(stringsArray[i]);
+        for (int i = 0; i < radixArray.length; i++) {
+            System.out.println(radixArray[i]);
         }
     }
 
@@ -18,6 +18,6 @@ public class Coding_Challenge_3 {
     }
 
     public static void radixSingleSort(String[] input, int position, int radix){
-
+        int numte
     }
 }

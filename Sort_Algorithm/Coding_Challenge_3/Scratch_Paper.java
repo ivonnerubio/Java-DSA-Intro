@@ -39,6 +39,7 @@ public class Scratch_Paper {
 
         int[] temp = new int[numItems];
 
+        // temp[--countArray[getDigit(position,input[]
         for(int tempIndex=numItems-1; tempIndex >=0; tempIndex--){
             temp[--countArray[getDigit(position,input[tempIndex],radix )]] = input[tempIndex];
         }
