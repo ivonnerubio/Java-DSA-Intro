@@ -14,7 +14,7 @@ public class Main {
         list.addFirst(janeJones);
         list.addFirst(johnDoe);
         list.addFirst(marySmith);
-        list.add(mikeWilson);
+        list.addFirst(mikeWilson);
 
         Iterator iter = list.iterator();
         System.out.print("HEAD -> ");
@@ -24,7 +24,7 @@ public class Main {
         }
         System.out.println("null");
 
-        list.addLast(billEnd);
+        list.remove(billEnd);
         iter = list.iterator();
         System.out.print("HEAD -> ");
         while(iter.hasNext()){
@@ -32,5 +32,24 @@ public class Main {
             System.out.print(" <=> ");
         }
         System.out.println("null");
+
+        list.removeFirst();
+        iter = list.iterator();
+        System.out.print("HEAD -> ");
+        while(iter.hasNext()){
+            System.out.print(iter.next());
+            System.out.print(" <=> ");
+        }
+
+        list.removeLast();
+        iter = list.iterator();
+        System.out.print("HEAD -> ");
+        while(iter.hasNext()){
+            System.out.print(iter.next());
+            System.out.print(" <=> ");
+        }
+
+
+
     }
 }
