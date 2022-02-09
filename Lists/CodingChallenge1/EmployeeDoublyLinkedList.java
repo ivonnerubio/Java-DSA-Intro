@@ -36,21 +36,22 @@ public class EmployeeDoublyLinkedList {
     }
 
     public boolean addBefore(Employee newEmployee, Employee existingEmployee) {
-        EmployeeNode newNode = new EmployeeNode(newEmployee);
-        EmployeeNode previousNode = new EmployeeNode(existingEmployee);
-        EmployeeNode current = head;
-        while (current != null) {
-            if(current.equals(previousNode)){
-                return true;
-            }
-            current = current.getNext();
+        if(head==null){
+            return false;
         }
 
-        // return true if you were able to successfully add the employee
-        // into the list before the existing employee. Return false
-        // if the existing employee doesn't exist in the list
+        // find the existing employee
+        EmployeeNode current = head;
+        while (current != null && !current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
 
-        // add your code here
+        }
+
+        if(current == null){
+            return false;
+        }
+
+
 
         return false;
     }
