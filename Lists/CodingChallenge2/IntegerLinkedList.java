@@ -25,10 +25,24 @@ public class IntegerLinkedList {
     }
 
     public void insertSorted(Integer value) {
+        IntegerNode newNode = new IntegerNode(value);
 
-        // add your code here
 
-    }
+        if(head ==null || head.getValue() >= value){
+            addToFront(value);
+            return;
+        }
+        IntegerNode current = head.getNext();
+        IntegerNode previous=head;
+        while(current != null && current.getValue() < value ) {
+            previous = current;
+            current = current.getNext();
+        }
+        previous.setNext(newNode);
+        newNode.setNext(current);
+        size++;
+
+        }
 
     public int getSize() {
         return size;
