@@ -1,4 +1,4 @@
-package Stacks;
+package Stacks.ArrayStack;
 
 public class Main {
 
