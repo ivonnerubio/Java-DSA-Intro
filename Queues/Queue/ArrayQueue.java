@@ -1,4 +1,4 @@
-package Queues;
+package Queues.Queue;
 
 import java.util.NoSuchElementException;
 

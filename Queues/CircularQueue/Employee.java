@@ -1,4 +1,4 @@
-package Queues;
+package Queues.CircularQueue;
 
 public class Employee {
 
