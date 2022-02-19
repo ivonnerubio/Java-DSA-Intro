@@ -34,9 +34,7 @@ public class Main {
         while (iterator.hasNext()) {
              newStr += iterator.next();
         }
-        if(string.equals(newStr)){
-            return true;
-        }
-        return false;
+
+        return newStr.equals(string);
     }
 }
