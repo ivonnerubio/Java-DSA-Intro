@@ -38,22 +38,13 @@ public class SimpleHashtable {
     }
 
     public Employee remove(String key){
-        int hashedKey = findKey(key);
-        if(hashedKey == -1){
+        int hashedKey = findKey(key);if(hashedKey == -1){
             return null;
         }
 
 
         Employee employee = hashtable[hashedKey].employee;
         hashtable[hashedKey] = null;
-
-        StoredEmployee[] oldHashtable = hashtable;
-        hashtable = new StoredEmployee[oldHashtable.length];
-        for(int i=0; i< oldHashtable.length; i++){
-            if(oldHashtable[i]!= null){
-                put(oldHashtable[i].key, oldHashtable[i].employee);
-            }
-        }
         return employee;
     }
 
