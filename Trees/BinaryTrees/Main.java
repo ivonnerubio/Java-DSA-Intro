@@ -12,13 +12,22 @@ public class Main {
         intTree.insert(22);
         intTree.insert(32);
 
-       // intTree.traverseInOrder();
+        intTree.traverseInOrder();
+        System.out.println();
 
-        System.out.println(intTree.get(26));
-        System.out.println(intTree.get(17));
-        System.out.println(intTree.get(888));
+//        System.out.println(intTree.get(26));
+//        System.out.println(intTree.get(17));
+//        System.out.println(intTree.get(888));
+//
+//        System.out.println(intTree.min());
+//        System.out.println(intTree.max());
 
-        System.out.println(intTree.min());
-        System.out.println(intTree.max());
+        intTree.delete(15);
+        intTree.traverseInOrder();
+        System.out.println();
+
+        intTree.delete(25);
+        intTree.traverseInOrder();
+        System.out.println();
     }
 }

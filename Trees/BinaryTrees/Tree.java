@@ -36,13 +36,20 @@ public class Tree {
             subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), value));
         }
         else{
-            // Cases 1 and 2: node to delete has 0 or 1 child(ren)
+            // Cases 1 and 2 v: node to delete has 0 or 1 child(ren)
             if(subtreeRoot.getLeftChild() == null){
                 return subtreeRoot.getRightChild();
             }
             else if(subtreeRoot.getRightChild() == null){
                 return subtreeRoot.getLeftChild();
             }
+
+            // Case 3: node to delete has 2 children
+            // Replace the value in the subtree node with the smallest value from the right subtree
+            subtreeRoot.setData(subtreeRoot.getRightChild().min());
+
+            // Delete the smallest value in the right subtree
+            subtreeRoot.setRightChild(delete(subtreeRoot.getRightChild(), subtreeRoot.getData()));
         }
 
         return subtreeRoot;
