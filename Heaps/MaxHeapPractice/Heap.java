@@ -43,6 +43,19 @@ public class Heap {
         return deletedValue;
     }
 
+    public void fixHeapBelow(int index, int lastHeapIndex){
+        int childToSwap;
+
+        while(index <= lastHeapIndex){
+            int leftChild = getChild(index, true);
+            int rightChild = getChild(index, false);
+
+            if(leftChild <= lastHeapIndex){
+
+            }
+        }
+    }
+
     public void fixHeapAbove(int index){
         int newValue = heap[index];
         while(index > 0 && newValue > heap[getParent(index)]){
