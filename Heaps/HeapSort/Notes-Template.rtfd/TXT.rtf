@@ -7,24 +7,21 @@
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
 {\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
-{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
-\margl1440\margr1440\vieww8380\viewh15240\viewkind0
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\vieww9300\viewh15240\viewkind0
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-Storing Heaps as Arrays\
+Heap Sort\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\fs28 \cf0 Heaps - Storing Heaps as Arrays
+\fs28 \cf0 Heaps - Heap Sort
 \f1\b0\fs24 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2022-03-07 at 5.59.22 PM.png \width18860 \height10640 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}
-\f1 \expnd0\expndtw0\kerning0
-\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
 
 \f2 \cf0 \kerning1\expnd0\expndtw0 \
@@ -33,26 +30,14 @@ Storing Heaps as Arrays\
 \
 \pard\pardeftab720\partightenfactor0
 \cf0 Overview\
-\pard\pardeftab720\partightenfactor0
-
-\f1\b0\fs24 \cf0 We can store binary heaps as arrays. We put the root at array[0]. We then traverse each level from left to right, and so the left child of the root would go into array[1], its child would go into array[2], etc.   \
-\
-For the node at array[i]:\
-\
-Left child = 2i+1\
-Right child = 2i+2\
-\
-Parent = floor((i-1)/2)\
-\
-
-\f0\b \ul Inserting Items\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
-\f1\b0 \cf0 \kerning1\expnd0\expndtw0 \ulnone {\listtext	\uc0\u8226 	}Always add new items to the end of the array\
-{\listtext	\uc0\u8226 	}Then we have to fix the heap (heapify)\
-{\listtext	\uc0\u8226 	}We compare the new item against its parent\
-{\listtext	\uc0\u8226 	}If the item is greater than its parent, we swap it with its parent\
-{\listtext	\uc0\u8226 	}We then rinse and repeat\expnd0\expndtw0\kerning0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}We know the root has the largest value\
+{\listtext	\uc0\u8226 	}Swap root with the last element in the array\
+{\listtext	\uc0\u8226 	}Heapify the tree, but exclude the last node\
+{\listtext	\uc0\u8226 	}After heaping, second largest element is at the root\
+{\listtext	\uc0\u8226 	}Rinse and repeat\
+{\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\partightenfactor0
 \cf0 \
@@ -63,8 +48,9 @@ Parent = floor((i-1)/2)\
 
 \fs28 \cf0 Time Space Complexity:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-
-\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 	\'95 
+\ls2\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}Worst case is O of n of log n - this is because we swap elements \
+{\listtext	\uc0\u8226 	}
 \f0\b\fs28 \expnd0\expndtw0\kerning0
 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
@@ -74,8 +60,9 @@ Parent = floor((i-1)/2)\
 
 \fs28 \cf0 [S] Strengths:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls2\ilvl0
-\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\ls3\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}In place algorithm\
+{\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \
 \pard\tx720\pardeftab720\partightenfactor0
 \cf0 \
@@ -83,8 +70,8 @@ Parent = floor((i-1)/2)\
 
 \f0\b\fs28 \cf0 [W] Weakness:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls3\ilvl0
-\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\ls4\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}Once you sort a heap, it is no longer a heap\expnd0\expndtw0\kerning0
 \
 \pard\tx720\pardeftab720\partightenfactor0
 \cf0 \
@@ -93,7 +80,7 @@ Parent = floor((i-1)/2)\
 
 \f0\b\fs28 \cf0 [O] Opportunities\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls4\ilvl0
+\ls5\ilvl0
 \f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \
 \pard\tx720\pardeftab720\partightenfactor0
@@ -102,7 +89,7 @@ Parent = floor((i-1)/2)\
 
 \f0\b\fs28 \cf0 [T] Threats:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls5\ilvl0
+\ls6\ilvl0
 \f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720\partightenfactor0
