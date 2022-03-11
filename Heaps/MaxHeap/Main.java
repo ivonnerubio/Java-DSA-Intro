@@ -16,6 +16,7 @@ public class Main {
         heap.printHeap();
         System.out.println(heap.peek());
         System.out.println(heap.getChild(0,true));
+
     }
 
 

@@ -13,6 +13,7 @@ public class Heap {
             throw new IndexOutOfBoundsException("heap is full");
         }
         heap[size] = value;
+        fixHeapAbove(size);
         size++;
     }
 
@@ -51,7 +52,25 @@ public class Heap {
             int rightChild = getChild(index, false);
 
             if(leftChild <= lastHeapIndex){
+                if(rightChild > lastHeapIndex){
+                    childToSwap = leftChild;
+                }
+                else{
+                    childToSwap = (heap[leftChild]) > heap[rightChild] ? leftChild:rightChild;
+                }
 
+                if(heap[index] < heap[childToSwap]){
+                    int tmp = heap[index];
+                    heap[index] = heap[childToSwap];
+                    heap[childToSwap] = tmp;
+                }
+                else{
+                    break;
+                }
+                index = childToSwap;
+            }
+            else{
+                break;
             }
         }
     }
